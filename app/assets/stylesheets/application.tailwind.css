@@ -11,3 +11,41 @@
 }
 
 */
+
+.omikuji-shake-hover {
+  transition: transform 2s;
+  transform-origin: bottom center;
+}
+.omikuji-shake-hover:hover {
+  animation: swing-bottom 2s infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes swing-bottom {
+  0%   { transform: rotate(0deg);}
+  10%  { transform: rotate(-10deg);}
+  20%  { transform: rotate(10deg);}
+  30%  { transform: rotate(-10deg);}
+  40%  { transform: rotate(10deg);}
+  50%  { transform: rotate(-10deg);}
+  60%  { transform: rotate(10deg);}
+  70%  { transform: rotate(-10deg);}
+  80%  { transform: rotate(10deg);}
+  90%  { transform: rotate(0deg);}
+  100% { transform: rotate(0deg);}
+}
+
+@keyframes flip-in {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-flip-in {
+  animation: flip-in 0.7s ease-out both;
+  transform-origin: top;
+}

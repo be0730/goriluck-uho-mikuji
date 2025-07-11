@@ -1,11 +1,33 @@
-<div class="flex flex-col items-center justify-center min-h-screen bg-yellow-100">
-  <h1 class="text-4xl font-bold text-green-700 mb-6">Goriluck ウホみくじ</h1>
-  <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+<% set_meta_tags(
+  title: "Goriluck ウホみくじ - #{@result[:result]}",
+  description: @result[:message],
+  og: {
+    title: "Goriluck ウホみくじ - #{@result[:result]}",
+    description: @result[:message],
+    type: "website",
+    url: request.original_url,
+    image: @og_image
+  },
+  twitter: {
+    card: "summary_large_image",
+    image: @og_image
+  }
+) %>
+
+<div class="flex flex-col items-center min-h-full bg-yellow-100">
+  <!-- おみくじ結果全体だけをラップ -->
+  <div class="bg-white rounded-2xl shadow-lg p-8 text-center animate-flip-in origin-top inline-block">
     <span class="text-6xl block mb-4">🦍</span>
-    <h2 class="text-3xl font-extrabold mb-2 text-purple-700"><%= @result[:result] %></h2>
-    <p class="text-lg text-gray-700 mb-6"><%= @result[:message] %></p>
-    <%= link_to "もう一度ウホ！", omikuji_path, class: "inline-block px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-xl transition" %>
+    <h2 class="text-3xl font-extrabold mb-2 <%= omikuji_color_class(@result[:result]) %>">
+      <%= @result[:result] %>
+    </h2>
+    <p class="text-lg text-gray-700 mb-6 [writing-mode:vertical-rl]"><%= @result[:message] %></p>
   </div>
+  <!-- ↓アニメーションには含めない。ここから下はstatic表示-->
+  <%= link_to "もう一度ウホ！", omikuji_path, data: { turbo: false }, class: "inline-block px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-xl transition mt-16" %>
+  <%= link_to "https://twitter.com/share?url=#{CGI.escape('https://goriluck-uho-mikuji.onrender.com')}&text=#{CGI.escape('Goriluck ウホみくじ')}&hashtags=Goriluckウホみくじ", target: "_blank", rel: "noopener noreferrer", title: "Xでシェアする" do %>
+    <i class="fa-brands fa-x-twitter mr-2"></i>
+    でシェア
   <%= link_to "トップページに戻る", root_path, class: "mt-6 text-green-700 hover:underline" %>
-  <p class="mt-10 text-gray-500 text-sm">バナナは心の栄養ウホ🍌</p>
+  <% end %>
 </div>
