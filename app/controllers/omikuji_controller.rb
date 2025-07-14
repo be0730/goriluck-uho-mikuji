@@ -13,7 +13,9 @@ class OmikujiController < ApplicationController
     # その他結果も追加...
   }
 
-  @og_image = view_context.image_url(og_image_map[@result[:result]] || "ogp/default.png")
+  og_image_file = og_image_map[@result[:result]] || "ogp/default.png"
+  @og_image = "#{request.base_url}/#{og_image_file}"
+
 
   set_meta_tags(
       title: "Goriluck ウホみくじ - #{@result[:result]}",
