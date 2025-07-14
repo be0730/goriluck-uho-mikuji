@@ -80,5 +80,5 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 end
 
-Rails.application.routes.default_url_options[:host] = 'localhost:3000'
-Rails.application.routes.default_url_options[:host] = 'goriluck-uho-mikuji.onrender.com'
+Rails.application.routes.default_url_options[:host] = "localhost:3000"
+Rails.application.routes.default_url_options[:host] = "goriluck-uho-mikuji.onrender.com"
