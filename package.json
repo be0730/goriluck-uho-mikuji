@@ -5,7 +5,9 @@
     "esbuild": "^0.25.5"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+  "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+  "build:css": "tailwindcss -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css",
+  "build": "yarn build:js && yarn build:css"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",

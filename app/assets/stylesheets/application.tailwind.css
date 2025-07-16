@@ -49,3 +49,23 @@
   animation: flip-in 0.7s ease-out both;
   transform-origin: top;
 }
+
+@layer utilities {
+  .rainbow-text {
+    background-image: linear-gradient(
+      to right,
+      red,
+      deeppink,
+      orange,
+      gold,
+      limegreen,
+      deepskyblue,
+      blue,
+      purple
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}

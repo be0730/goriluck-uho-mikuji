@@ -19,7 +19,7 @@ class OmikujiController < ApplicationController
       "ウホ吉"       => "ogp/uhokichi.png",
       "中ウホ吉"     => "ogp/chuuuhokichi.png",
       "小ウホ吉"     => "ogp/syouuhokichi.png",
-      "ウホ末吉"     => "ogp/uhosuekichi.png",
+      "末ウホ吉"     => "ogp/uhosuekichi.png",
       "ウホ凶"       => "ogp/uhokyou.png"
     }
 
