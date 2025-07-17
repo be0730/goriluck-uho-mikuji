@@ -5,8 +5,9 @@
     <h2 class="text-6xl font-extrabold mb-10 <%= omikuji_color_class(@result[:result]) %>">
       <%= @result[:result] %>
     </h2>
-    <div class="flex justify-center items-start min-h-[20vh]">
-      <p class="text-3xl text-gray-700 break-words max-h-[20vh] text-center [text-indent:1em] min-h-[150px] "><%= @result[:message][0] %><br>
+    <div class="flex justify-center items-start">
+      <p class="text-3xl text-gray-700 break-words text-center [text-indent:1em] min-h-[120px] overflow-y-auto leading-snug">
+        <%= @result[:message][0] %><br>
         <span class="block mt-[2em]"><%= @result[:message][1] %></span>
       </p>
     </div>
