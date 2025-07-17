@@ -28,13 +28,12 @@ class OmikujiController < ApplicationController
 
     set_meta_tags(
       title: "Goriluck ウホみくじ - #{@result[:result]}",
-      description: @result[:message],
       og: {
         title: "Goriluck ウホみくじ - #{@result[:result]}",
-        description: @result[:message],
-        type: "website",
+        description: ActionController::Base.helpers.strip_tags(@result[:message].to_s),
+        image: @og_image,
         url: request.original_url,
-        image: @og_image
+        type: "website"
       },
       twitter: {
         card: "summary_large_image",

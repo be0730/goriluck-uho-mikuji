@@ -3,10 +3,16 @@ module OmikujiHelper
     case result
     when "ゴリラ大大吉"
       "rainbow-text"
-    when /大ウホ吉|ウホ吉/
+    when "大ウホ吉"
+      "text-red-500"
+    when "ウホ吉"
       "text-yellow-500"
-    when /中ウホ吉|小ウホ吉|"末ウホ吉"/
-      "text-green-600"
+    when "中ウホ吉"
+      "text-green-500"
+    when "小ウホ吉"
+      "text-purple-500"
+    when "末ウホ吉"
+      "text-blue-500"
     when "ウホ凶"
       "text-gray-500"
     else

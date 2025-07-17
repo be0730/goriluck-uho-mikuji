@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "top#index"
   get "omikuji", to: "omikuji#index"
-  get 'omikuji/result/:id', to: 'omikuji#result', as: 'omikuji_result'
+  get "omikuji/result/:id", to: "omikuji#result", as: "omikuji_result"
 end
