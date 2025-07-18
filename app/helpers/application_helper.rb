@@ -14,7 +14,7 @@ module ApplicationHelper
     }
   end
 
-  def auto_linebreak(text, width = 15)
+  def auto_linebreak(text, width = 25)
     return '' if text.blank?
     text.scan(/.{1,#{width}}/).join("\n")
   end
