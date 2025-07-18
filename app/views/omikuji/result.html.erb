@@ -6,10 +6,12 @@
       <%= @result[:result] %>
     </h2>
     <div class="flex justify-center items-start">
-      <p class="text-3xl text-gray-700 break-words text-center [text-indent:1em] min-h-[120px] overflow-y-auto leading-snug">
-        <%= @result[:message][0] %><br>
-        <span class="block mt-[2em]"><%= @result[:message][1] %></span>
-      </p>
+      <div class="text-1xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 break-words text-center [text-indent:1em] min-h-[120px] overflow-y-auto leading-snug">
+        <%= simple_format(auto_linebreak(@result[:message][0])) %>
+        <% if @result[:message][1].present? %>
+          <span class="block mt-[2em]"><%= simple_format(auto_linebreak(@result[:message][1])) %></span>
+        <% end %>
+      </div>
     </div>
   </div>
   <!-- ↓アニメーションには含めない。ここから下はstatic表示-->
