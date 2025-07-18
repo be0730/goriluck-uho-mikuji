@@ -6,7 +6,7 @@
       <%= @result[:result] %>
     </h2>
     <div class="flex justify-center items-start">
-      <div class="text-lg md:text-4xl text-gray-700 text-responsive text-center [text-indent:1em] min-h-[120px] overflow-y-auto leading-snug">
+      <div class="text-3xl text-gray-700 text-responsive text-center [text-indent:1em] min-h-[120px] overflow-y-auto leading-snug">
         <%= simple_format(auto_linebreak(@result[:message][0]), {}, wrapper_tag: nil) %>
         <% if @result[:message][1].present? %>
           <span class="block mt-[1em]">
