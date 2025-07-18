@@ -7,12 +7,6 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}'
   ],
-  safelist: [
-    'text-4xl',
-    'md:text-6xl',
-    'sm:text-2xl',
-    'lg:text-4xl'
-  ],
   theme: {
     extend: {
       fontFamily: {
