@@ -10,6 +10,7 @@ module.exports = {
   safelist: [
     'text-responsive',
     'responsive-text',
+    'text-[clamp(1rem,4vw,2rem)]'
   ],
   theme: {
     extend: {
