@@ -10,12 +10,12 @@ module ApplicationHelper
         type: "website",
         url: request.original_url,
         site_name: "Goriluck ウホみくじ",
-        image: image_url("/ogp/omikuji.png") # 配置するパスやファイル名によって変更
+        image: image_url("/ogp/default.png") # 配置するパスやファイル名によって変更
       },
       twitter: {
         card: "summary_large_image", # Twitterで表示する場合は大きいカードに変更
         site: "@", # アプリの公式Twitterアカウントがあれば、アカウント名を記載
-        image: image_url("/ogp/omikuji.png") # 配置するパスやファイル名によって変更
+        image: image_url("/ogp/default.png") # 配置するパスやファイル名によって変更
       }
     }
   end
