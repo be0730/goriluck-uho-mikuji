@@ -17,7 +17,7 @@ module ApplicationHelper
         description: "今日のあなたのウホ運勢をチェックしよう！",
         card: "summary_large_image", # Twitterで表示する場合は大きいカードに変更
         site: "@", # アプリの公式Twitterアカウントがあれば、アカウント名を記載
-        image: "#{request.base_url}/ogp/omikuji.png" # 配置するパスやファイル名によって変更
+        image: image_url("/ogp/omikuji.png") # 配置するパスやファイル名によって変更
       }
     }
   end
