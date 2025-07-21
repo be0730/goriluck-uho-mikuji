@@ -1,7 +1,7 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: "Your Site Name",
+      site: "Goriluck ウホみくじ",
       title: "Goriluck ウホみくじ",
       description: "今日のあなたのウホ運勢をチェックしよう！",
       og: {
@@ -9,8 +9,8 @@ module ApplicationHelper
         description: "今日のあなたのウホ運勢をチェックしよう！",
         type: "website",
         url: request.original_url,
-        site_name: "Your Site Name",
-        image: image_url("omikuji.png") # 配置するパスやファイル名によって変更
+        site_name: "Goriluck ウホみくじ",
+        image: "#{request.base_url}/ogp/omikuji.png" # 配置するパスやファイル名によって変更
       },
       twitter: {
         title: "Goriluck ウホみくじ",
