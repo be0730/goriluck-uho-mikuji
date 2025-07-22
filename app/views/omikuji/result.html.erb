@@ -18,7 +18,7 @@
   </div>
   <!-- ↓アニメーションには含めない。ここから下はstatic表示-->
   <%= link_to "もう一度ウホ！", omikuji_path, data: { turbo: false }, class: "inline-block px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition mt-16" %>
-  <%= link_to "https://twitter.com/share?url=#{CGI.escape('https://goriluck-uho-mikuji.onrender.com')}&text=#{CGI.escape("今日の運勢は#{@result[:result]}でした。")}&hashtags=Goriluckウホみくじ", target: "_blank", rel: "noopener noreferrer", title: "Xでシェアする" do %>
+  <%= link_to "https://twitter.com/intent/tweet?url=#{CGI.escape('https://goriluck-uho-mikuji.onrender.com')}&text=#{CGI.escape("今日の運勢は#{@result[:result]}でした。")}&hashtags=Goriluckウホみくじ", target: "_blank", rel: "noopener noreferrer", title: "Xでシェアする" do %>
     <i class="inline-block px-8 py-4 bg-gray-500 hover:bg-green-600 text-white rounded-xl transition mt-8 fa-brands fa-x-twitter mr-2">でシェア</i>
   <%= link_to "トップページに戻る", root_path, class: "mt-8 text-green-700 hover:underline" %>
   <% end %>
